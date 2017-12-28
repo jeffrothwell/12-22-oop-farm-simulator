@@ -1,5 +1,5 @@
 require_relative ('field')
-
+require 'pp'
 
 class Simulator
 
@@ -38,7 +38,14 @@ class Simulator
   end
 
   def new_field
-
+    puts "What kind of field? (corn or wheat)"
+    type = gets.chomp.downcase
+    puts "How large in hectares?"
+    size = gets.to_i
+    field = Field.new(type, size)
+    @@fields << field
+    puts "Added a #{type} field of #{size} hectares."
+    pp @@fields
   end
 
   # harvest method should iterate through all fields in the @@fields
