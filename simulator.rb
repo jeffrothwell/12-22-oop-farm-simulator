@@ -1,8 +1,9 @@
 require_relative ('field')
 
-end
 
 class Simulator
+
+  @@fields = []
 
   def initialize
 
@@ -40,6 +41,8 @@ class Simulator
 
   end
 
+  # harvest method should iterate through all fields in the @@fields
+  # array and get the harvest from the harvest method in the Field class
   def harvest
 
   end
