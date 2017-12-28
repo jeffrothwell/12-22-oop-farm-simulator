@@ -4,6 +4,7 @@ require 'pp'
 class Simulator
 
   @@fields = []
+  @@farm_harvest = 0
 
   def initialize
 
@@ -51,7 +52,12 @@ class Simulator
   # harvest method should iterate through all fields in the @@fields
   # array and get the harvest from the harvest method in the Field class
   def harvest
-
+    @@fields.each do |field|
+      harvest = field.harvest
+      puts "Harvesting #{harvest} food from #{field.size} hectare #{field.type} field"
+      @@farm_harvest += harvest
+    end
+    puts "The farm has harvested #{@@farm_harvest} total food so far"
   end
 
   def status
