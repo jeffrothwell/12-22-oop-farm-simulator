@@ -7,13 +7,13 @@ class Field
     @field_harvest = 0
   end
 
-  def harvest(field)
-    if field.type = "corn"
-      amount_harvested = field.size * 20
-    elsif field.type = "wheat"
-      amount_harvested = field.size * 30
+  def harvest
+    if self.type = "corn"
+      amount_harvested = self.size * 20
+    elsif self.type = "wheat"
+      amount_harvested = self.size * 30
     end
-    field.field_harvest += amount_harvested
+    self.field_harvest += amount_harvested
     return amount_harvested
   end
 
