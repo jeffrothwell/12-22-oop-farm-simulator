@@ -1,3 +1,7 @@
+require_relative ('field')
+
+end
+
 class Simulator
 
   def initialize
@@ -22,7 +26,29 @@ class Simulator
     puts "exit    -> exits the program"
   end
 
-  def call_option
+  def call_option(option)
+    case option
+    when "field" then new_field
+    when "harvest" then harvest
+    when "status" then status
+    when "relax" then relax
+    when "exit" then exit
+    end
+  end
+
+  def new_field
+
+  end
+
+  def harvest
+
+  end
+
+  def status
+
+  end
+
+  def relax
 
   end
 
