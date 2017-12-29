@@ -61,7 +61,10 @@ class Simulator
   end
 
   def status
-
+    @@fields.each do |field|
+      puts "#{field.type} field is #{field.size} hectares"
+    end
+    puts "The farm has #{@@farm_harvest} harvested food so far."
   end
 
   def relax
