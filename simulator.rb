@@ -1,6 +1,4 @@
 require_relative ('field')
-require 'pp'
-require "pry"
 
 class Simulator
 
@@ -47,7 +45,6 @@ class Simulator
     field = Field.new(type, size)
     @@fields << field
     puts "Added a #{type} field of #{size} hectares."
-    pp @@fields
   end
 
   # harvest method should iterate through all fields in the @@fields
@@ -69,7 +66,13 @@ class Simulator
   end
 
   def relax
-
+    @@fields.each do |field|
+      if field.type == "corn"
+        puts "#{field.size} hectares of beautiful green corn stalks rustling in the breeze."
+      elsif field.type == "wheat"
+        puts "Golden wheat shimmers in the sunshine over #{field.size} hectares of awesome."
+      end
+    end
   end
 
 end
