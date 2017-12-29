@@ -8,9 +8,9 @@ class Field
   end
 
   def harvest
-    if self.type = "corn"
+    if self.type == "corn"
       amount_harvested = self.size * 20
-    elsif self.type = "wheat"
+    elsif self.type == "wheat"
       amount_harvested = self.size * 30
     end
     self.field_harvest += amount_harvested

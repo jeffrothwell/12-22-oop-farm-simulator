@@ -1,5 +1,6 @@
 require_relative ('field')
 require 'pp'
+require "pry"
 
 class Simulator
 
